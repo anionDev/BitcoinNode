@@ -1,12 +1,12 @@
-# GRYVABitcoinNode
+# BitcoinNode
 
 ## General
 
-[GRYVABitcoinNode](https://github.com/anionDev/GRYVABitcoinNode) is a docker-image for simply running a [Bitcoin](https://bitcoin.org)-node in a docker-container.
+[BitcoinNode](https://github.com/anionDev/BitcoinNode) is a docker-image for simply running a [Bitcoin](https://bitcoin.org)-node in a docker-container.
 
 ## Reference
 
-The reference can be found [here](https://github.com/anionDev/GRYVABitcoinNode/blob/main/GRYVABitcoinNode/Other/Reference/ReferenceContent/index.md).
+The reference can be found [here](https://github.com/anionDev/BitcoinNode/blob/main/BitcoinNode/Other/Reference/ReferenceContent/index.md).
 
 ## Development
 
@@ -26,4 +26,4 @@ This repository applies the [CommonProjectStructure](https://projects.aniondev.d
 
 ## License
 
-See [License.txt](https://github.com/anionDev/GRYVABitcoinNode/blob/main/License.txt) for license-information.
+See [License.txt](https://github.com/anionDev/BitcoinNode/blob/main/License.txt) for license-information.

@@ -1,9 +1,9 @@
 version: '3.2'
 
 services:
-  gryvabitcoinnode:
-    image: gryvabitcoinnode:0.2.12
-    container_name: 'gryvabitcoinnode'
+  bitcoinnode:
+    image: bitcoinnode:0.2.12
+    container_name: 'bitcoinnode'
     volumes:
       - "./Volumes/Data:/Workspace/Data"
       - "./Volumes/Logs:/Workspace/Logs"

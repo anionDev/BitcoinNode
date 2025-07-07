@@ -12,11 +12,11 @@ tasks:
       - basebuildallcodeunits
       - bb
 
-  GryvabitcoinnodeRunExample:
-    desc: "GRYVABitcoinNode: Run example"
+  bitcoinnodeRunExample:
+    desc: "BitcoinNode: Run example"
     silent: true
     dir: "."
     cmds:
-      - python GRYVABitcoinNode/Other/Reference/ReferenceContent/Examples/MinimalDockerComposeFile/RunExample.py
+      - python BitcoinNode/Other/Reference/ReferenceContent/Examples/MinimalDockerComposeFile/RunExample.py
     aliases:
-      - gryvabitcoinnoderunexample
+      - bitcoinnoderunexample

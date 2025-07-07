@@ -1,1 +1,1 @@
-# GRYVABitcoinNode-reference
+# BitcoinNode-reference

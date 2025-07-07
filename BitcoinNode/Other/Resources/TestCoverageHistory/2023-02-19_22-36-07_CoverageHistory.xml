@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <coverage version="1.0" date="2023-02-19_22-36-07" tag="v0.2.4">
-  <assembly name="GRYVABitcoinNode" />
+  <assembly name="BitcoinNode" />
 </coverage>

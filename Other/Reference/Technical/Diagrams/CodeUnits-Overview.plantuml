@@ -1,11 +1,11 @@
 @startuml CodeUnits-Overview
-title CodeUnits of GRYVABitcoinNode
+title CodeUnits of BitcoinNode
 
-[GRYVABitcoinNode]
-note as GRYVABitcoinNodeNote
-  GRYVABitcoinNode is a docker-image for simply running a Bitcoin-node in a docker-container.
+[BitcoinNode]
+note as BitcoinNodeNote
+  BitcoinNode is a docker-image for simply running a Bitcoin-node in a docker-container.
 end note
-GRYVABitcoinNode .. GRYVABitcoinNodeNote
+BitcoinNode .. BitcoinNodeNote
 
 
 @enduml

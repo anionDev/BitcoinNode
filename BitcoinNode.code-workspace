@@ -20,8 +20,8 @@
 				]
 			},
 			{
-				"label": "GRYVABitcoinNode: Run example",
-				"command": "python GRYVABitcoinNode/Other/Reference/ReferenceContent/Examples/MinimalDockerComposeFile/RunExample.py",
+				"label": "BitcoinNode: Run example",
+				"command": "python BitcoinNode/Other/Reference/ReferenceContent/Examples/MinimalDockerComposeFile/RunExample.py",
 				"args": [],
 				"type": "shell",
 				"options": {

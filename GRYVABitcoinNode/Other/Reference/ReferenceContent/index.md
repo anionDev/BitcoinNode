@@ -1,3 +1,0 @@
-# GRYVABitcoinNode reference
-
-TODO
