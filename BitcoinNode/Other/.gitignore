@@ -9,5 +9,6 @@ Resources/Constants/CodeUnitMajorVersion.*
 Resources/Constants/CodeUnitVersion.*
 Resources/Constants/CommitDate.*
 Resources/Constants/CommitId.*
+Resources/Constants/CurrentTimestamp.*
 Resources/Bitcoin
 

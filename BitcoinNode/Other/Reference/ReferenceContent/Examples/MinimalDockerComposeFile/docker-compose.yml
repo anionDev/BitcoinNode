@@ -2,7 +2,7 @@ version: '3.2'
 
 services:
   bitcoinnode:
-    image: bitcoinnode:0.2.12
+    image: bitcoinnode:0.2.13
     container_name: 'bitcoinnode'
     volumes:
       - "./Volumes/Data:/Workspace/Data"

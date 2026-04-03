@@ -25,8 +25,5 @@ COPY ./BitcoinNode/EntryPointScript.sh /Workspace/Program/EntryPointScript.sh
 RUN chmod +x /Workspace/Program/EntryPointScript.sh && \
     rm -rf /Workspace/Temp && \
     apt-get clean
-
-FROM debian:stable-slim
-COPY --from=builder / /
 WORKDIR /Workspace/Program
 ENTRYPOINT ["/Workspace/Program/EntryPointScript.sh"]

@@ -30,7 +30,7 @@ def get_latest_bitcoin_version()->str:
 def update_dependencies():
     script_file = str(Path(__file__).absolute())
     sc = ScriptCollectionCore()
-    TFCPS_Tools_General(sc).update_dependency_in_resources_folder(script_file, "Tor", get_latest_bitcoin_version())
+    TFCPS_Tools_General(sc).update_dependency_in_resources_folder(script_file, "Bitcoin", get_latest_bitcoin_version())
 
 
 if __name__ == "__main__":

@@ -27,3 +27,7 @@ def common_tasks():
     tf.do_common_tasks(tf.get_version_of_project())#codeunit-version should alsways be the same as project-version
     bitcoin_version=tf.tfcps_Tools_General.get_dependency_version_in_resources_folder(os.path.join(tf.get_codeunit_folder(),"Other","Resources"),"Bitcoin")
     GeneralUtilities.replace_regex_each_line_of_file(os.path.join(tf.get_codeunit_folder(),"ReadMe.md"),"The currently used Bitcoin\\-version is .*\\.", f"The currently used Bitcoin-version is {bitcoin_version}.")
+
+
+if __name__ == "__main__":
+    common_tasks()
