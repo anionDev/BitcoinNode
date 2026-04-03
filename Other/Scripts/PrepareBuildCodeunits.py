@@ -1,16 +1,8 @@
-from pathlib import Path
-from ScriptCollection.GeneralUtilities import GeneralUtilities
-from ScriptCollection.TasksForCommonProjectStructure import TasksForCommonProjectStructure
+from ScriptCollection.TFCPS.TFCPS_Generic import  TFCPS_Generic_CLI,TFCPS_Generic_Functions
 
-
-def prepare_build_codeunits():
-    t = TasksForCommonProjectStructure()
-    current_file = str(Path(__file__).absolute())
-    repository_folder = GeneralUtilities.resolve_relative_path("../../..", current_file)
-    t.generate_tasksfile_from_workspace_file(repository_folder)
-    t.generate_codeunits_overview_diagram(repository_folder)
-    t.generate_svg_files_from_plantuml_files_for_repository(repository_folder)
-
+def update_dependencies():
+    t :TFCPS_Generic_Functions= TFCPS_Generic_CLI().parse(__file__)
+    t.tfcps_Tools_General.update_dependent_oci_images(t.repository_folder)
 
 if __name__ == "__main__":
-    prepare_build_codeunits()
+    update_dependencies()

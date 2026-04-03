@@ -1,18 +1,19 @@
-import sys
+from ScriptCollection.GeneralUtilities import Platform
 import os
-from pathlib import Path
-from ScriptCollection.GeneralUtilities import GeneralUtilities
-from ScriptCollection.TasksForCommonProjectStructure import TasksForCommonProjectStructure
+from ScriptCollection.TFCPS.Docker.TFCPS_CodeUnitSpecific_Docker import TFCPS_CodeUnitSpecific_Docker_Functions,TFCPS_CodeUnitSpecific_Docker_CLI
 
-
+ 
 def build():
-    script_file = str(Path(__file__).absolute())
-    dependency_folder = GeneralUtilities.resolve_relative_path("../../Resources/Dependencies/Bitcoin", script_file)
-    version_file = os.path.join(dependency_folder, "Version.txt")
-    bitcoin_version = GeneralUtilities.read_text_from_file(version_file)
-    arguments = dict[str, str]()
-    arguments["BitcoinVersion"] = bitcoin_version
-    TasksForCommonProjectStructure().standardized_tasks_build_for_docker_project_with_additional_build_arguments(str(Path(__file__).absolute()), "QualityCheck", 1, sys.argv, arguments)
+    platforms:list[Platform] = [
+            Platform.Linux_AMD64,
+            Platform.Linux_ARM64,
+    ]
+    tf:TFCPS_CodeUnitSpecific_Docker_Functions=TFCPS_CodeUnitSpecific_Docker_CLI.parse(__file__)
+    tf.build(platforms,{
+        "image_debian":tf.tfcps_Tools_General.oci_image_manager.get_registry_address_for_image_with_default_tag(tf.get_repository_folder(),"Debian"),
+        "bitcoin_version":tf.tfcps_Tools_General.get_dependency_version_in_resources_folder(os.path.join(tf.get_codeunit_folder(),"Other","Resources"), "Bitcoin")
+    })
+    #TODO integrate sbom from tor
 
 
 if __name__ == "__main__":
